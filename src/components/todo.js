@@ -5,16 +5,12 @@ export default function Todo({ item, onUpdate, onDelete }) {
 
   function FormEdit() {
     const [newValue, setNewValue] = useState(item.title);
-    function handleSubmit(e) {
-      e.preventDefault();
-    }
+    function handleSubmit(e) {}
     function handleChange(e) {
-      e.preventDefault();
       const value = e.target.value;
       setNewValue(value);
     }
     function handleClickUpdateTodo(e) {
-      e.preventDefault();
       onUpdate(item.id, newValue);
       setIsEdit(false);
     }
